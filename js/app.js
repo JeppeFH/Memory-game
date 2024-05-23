@@ -5,6 +5,26 @@
 */
 
 // Step 1. Tilføj click event på alle kort holder elemente <figure>.
+let cards = document.querySelectorAll(".card");
+let firstSrc = data.target.children[0];
+
+for (let index = 0; index < cards.length; index++) {
+  cards[index].addEventListener("click", (data) => {
+    cards.src = data.target.children[0].src;
+
+    if (firstSrc != data.target.children[0]) {
+      // Gemmer Src i FirstSrc;
+      firstSrc.data.target.children[0];
+    } else if (firstSrc !== data.target.children[0]) {
+      // Er FirstSrc === data.target.children[0].src
+      // Hvis Ja - > Nulstill firstSrc  ="";
+      // Hvis Nej - > Slette Active fra de 2 billeder og nulstille firstSrc
+    }
+
+    data.target.classList.add("active");
+  });
+}
+
 // Step 2. Tilføj check om 2 billeder som er aktive matcher.
 
 // Ekstra opgaver.
