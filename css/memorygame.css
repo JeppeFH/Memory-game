@@ -35,6 +35,11 @@ button {
   font-size: 1.8rem;
 }
 
+button:hover {
+  background-color: #181818;
+  cursor: pointer;
+}
+
 #memory-wrapper p {
   text-align: center;
   font-size: 2rem;
