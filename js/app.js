@@ -61,17 +61,4 @@ const memoryGameImgs = [
   "https://picsum.photos/seed/memory_6/300/300",
 ];
 
-function initializeGame() {
-  gameBoard.innerHTML = "";
-  const shuffledImgs = memoryGameImgs.sort(() => 0.5 - Math.random());
-  shuffledImgs.forEach((imgSrc) => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.dataset.img = imgSrc;
-    card.style.backgroundImage = "";
-    card.addEventListener("click", () => handleCardClick(card));
-    gameBoard.appendChild(card);
-  });
-}
-
 // 4. Når spillet er forbi, brug confetti.js til at vise confetti på skærmen. Mere info her : https://github.com/abelmoricz/abelmoricz.github.io/tree/9eac02160de7bb57170441a441db96b36e8341d8/confetti.js-master
